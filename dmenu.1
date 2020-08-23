@@ -3,9 +3,15 @@
 dmenu \- dynamic menu
 .SH SYNOPSIS
 .B dmenu
-.RB [ \-bfiv ]
+.RB [ \-bfivx ]
 .RB [ \-g
 .IR columns ]
+.RB [ \-b
+.IR border ]
+.RB [ \-wh
+.IR height ]
+.RB [ \-ww
+.IR width ]
 .RB [ \-l
 .IR lines ]
 .RB [ \-m
@@ -66,8 +72,11 @@ dmenu lists items in a grid with the given number of columns.
 .BI \-l " lines"
 dmenu lists items in a grid with the given number of lines.
 .TP
-.BI \-h " height"
+.BI \-wh " height"
 dmenu uses a menu line of at least 'height' pixels tall, but no less than 8.
+.TP
+.BI \-ww " width"
+dmenu uses a menu window of at least 'width' pixels wide, but no less than 100.
 .TP
 .BI \-m " monitor"
 dmenu is displayed on the monitor number supplied. Monitor numbers are starting
@@ -111,6 +120,9 @@ defines the selected highlight foreground color.
 .TP
 .B \-v
 prints version information to stdout, then exits.
+.TP
+.B \-x
+Invert prefix matching setting.
 .TP
 .BI \-w " windowid"
 embed into windowid.
